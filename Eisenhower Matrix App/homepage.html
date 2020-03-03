@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> <!-- Character tab-->
+		<meta name="viewport" content="width= device-width"> <!-- Width of template -->
+		
+		<!-- SEO, description, keywords, author-->
+		<meta name="description" content="Productivity App">
+		<meta name="keywords" content="Productivity, Eisenhower Matrix, Time Tracker">
+		<meta name="author" content="Maria Tolymbek">
+
+		<title>Eisenhower Matrix | Welcome</title>
+		<link rel = "stylesheet" href = "./css/style.css">
+		
+		<!-- <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    	<script src="bower_components/jquery/jquery.js"></script>
+
+	</head>
+	<body>
+			<header>
+			<div class="container">
+				<!-- id is for something unique; class is over and over -->
+				<div id="branding">
+					<!-- span keeps it inline with the rest of the h1 
+					to apply the class -->
+					<h1><span class="highlight">Eisenhower </span>Matrix</h1>
+				</div>
+				<nav>
+					<ul>
+						<li class="current"><a href="homepage.html">Home</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="stats.html">Company</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+
+		<div id="like_button_container"></div>
+
+
+		<section id= "showcase">
+			<div class="container">
+				<h1>Eisenhower Matrix</h1>
+				  <div class="transbox">
+				  	<p> <em>We believe in the power of priority and focus to achieve maximum productivity. We have helped XX+ clients who have experienced an increase of XX% more productivity in the workplace using a combination of metrics and analytics. We can do the same for you. </em></p>
+				    
+				</div>
+
+			</div>
+		</section>
+
+		<section id="newsletter">
+			<div class="container">
+				<h1>Subscribe to our newsletter</h1>
+				<form action="">
+					<input type="email" placeholder="Enter email...">
+					<button type="submit" class="button1">Subscribe</button>
+
+				</form>
+			</div>	
+
+		</section>
+
+		<!--Boxes-->
+
+
+		<section id="boxes">
+			<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+			
+			<div class="container">
+				<h1 class="page-title">Tasks to Complete</h1>
+				<div class="box">
+					<h3>Do first</h3>
+					<input type="text" class="txtb1" name="text1" placeholder="Add a task">
+					
+					
+
+					<label class="container">Active
+					  <input class="radio" type="radio" name="radio" onclick="enable()">
+					  <span class="checkmark"></span>
+					</label>
+
+					 <div id="task1" class="notcomp">
+						<h4>Not Completed</h4>
+
+					
+					</div>
+
+					<div id="task2" class="comp">
+						<h4>Completed</h4>
+
+					</div> 
+
+				</div>
+
+				<div class="box">
+					<h3>Schedule</h3>
+					<input type="text" class="txtb2" name="text2" placeholder="Add a task">
+					
+
+					<label class="container">Active
+					  <input class="radio" type="radio" name="radio" onclick="enable()">
+					  <span class="checkmark"></span>
+					</label>
+
+					<div id="task3" class="notcomp">
+						<h4>Not Completed</h4>
+
+
+					</div>
+					<div id="task4" class="comp">
+						<h4>Completed</h4>
+
+					</div>
+				</div>
+
+
+			</div>
+			<div class="container">
+				<div class="box">
+					<h3>Delegate</h3>
+					<input type="text" class="txtb3" name="text3" placeholder="Add a task">
+				
+
+					<label class="container">Active
+					  <input class="radio" type="radio" name="radio" onclick="enable()">
+					  <span class="checkmark"></span>
+					</label>
+
+					<div id="task5" class="notcomp">
+						<h4>Not Completed</h4>
+
+					</div>
+					<div id="task6" class="comp">
+						<h4>Completed</h4>
+
+					</div>
+				</div>
+				<div class="box">
+					<h3>Don't Do</h3>
+					<input type="text" class="txtb4" name="text4" placeholder="Add a task">
+					
+
+			
+
+					<label class="container">Active
+					  <input class="radio" type="radio" name="radio" onclick="enable()">
+					  <span class="checkmark"></span>
+					</label>
+
+					<div id="task7" class="notcomp">
+						<h4>Not Completed</h4>
+
+
+					</div>
+					<div id="task8" class="comp">
+						<h4>Completed</h4>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+			<div class="main-col">
+			<p> </p>
+			<h4>Current Task</h4>
+			<label class="container">Urgent and Important
+			  <input type="radio" checked="checked" name="radio1">
+			  <span class="checkmark" style="background-color: red"></span>
+			</label>
+			<label class="container">Non-Urgent and Important
+			  <input type="radio" name="radio1">
+			  <span class="checkmark" style="background-color: blue"></span>
+			</label>
+			<label class="container">Urgent and Non-Important
+			  <input type="radio" name="radio1">
+			  <span class="checkmark" style="background-color: green"></span>
+			</label>
+			<label class="container">Non-Urgent and Non-Important
+			  <input type="radio" name="radio1">
+			  <span class="checkmark" style="background-color: purple"></span>
+			</label>
+		</div>
+
+		</section>
+
+
+		<script type="text/javascript">
+			/* Get the JS to work on individual boxes */
+
+
+
+						/* Wait until JS is ready - jQuery */
+						$(function(){
+							$(".container").hide(300).show(1000);
+							/* $(".container").slideUp(1000); */
+						});
+
+						function enable(){
+							document.getElementsbyClassName("radio").disabled = false;
+
+						}
+
+
+							$(".txtb1").on("keyup", function(e){
+								console.log("sdfsdfsd");
+
+
+								//13 means enter button
+								if(e.keyCode ===13 && $(".txtb1").val()!=""){
+								console.log("entered");
+									var task = $("<div class='task'></div>").text($(".txtb1").val());
+									var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+										var p = $(this).parent();
+										p.fadeOut(function(){
+											p.remove();
+										});
+									});
+
+								var check = $("<i class='fas fa-check'></i>").click(function(){
+									var p = $(this).parent();
+
+									p.fadeOut(function(){
+										$("#task2.comp").append(p);
+										/* No stupid appendChild */
+										p.fadeIn();
+
+									});
+									$(this).remove();
+
+								});
+
+
+									task.append(del, check);
+									$("#task1.notcomp").append(task);
+									//to clear the input
+									$(".txtb1").val("");
+								}
+							});
+						
+
+						$(".txtb2").on("keyup", function(e){
+							console.log("sdfsdfsd");
+
+							//13 means enter button
+							if(e.keyCode ===13 && $(".txtb2").val()!=""){
+							console.log("entered");
+								var task = $("<div class='task'></div>").text($(".txtb2").val());
+								var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+									var p = $(this).parent();
+									p.fadeOut(function(){
+										p.remove();
+
+									});
+								});
+
+								var check = $("<i class='fas fa-check'></i>").click(function(){
+									var p = $(this).parent();
+									p.fadeOut(function(){
+										$("#task4.comp").append(p);
+										p.fadeIn();
+
+									});
+									$(this).remove();
+
+								});
+
+								task.append(del, check);
+								$("#task3.notcomp").append(task);
+								//to clear the input
+								$(".txtb2").val("");
+							}
+						});
+
+						$(".txtb3").on("keyup", function(e){
+							console.log("sdfsdfsd");
+
+							//13 means enter button
+							if(e.keyCode ===13 && $(".txtb3").val()!=""){
+							console.log("entered");
+								var task = $("<div class='task'></div>").text($(".txtb3").val());
+								var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+									var p = $(this).parent();
+									p.fadeOut(function(){
+										p.remove();
+
+									});
+
+								});
+
+								var check = $("<i class='fas fa-check'></i>").click(function(){
+									var p = $(this).parent();
+									p.fadeOut(function(){
+										$("#task6.comp").append(p);
+										p.fadeIn();
+
+									});
+									$(this).remove();
+
+								});
+
+								task.append(del, check);
+								$("#task5.notcomp").append(task);
+								//to clear the input
+								$(".txtb3").val("");
+							}
+						});
+						$(".txtb4").on("keyup", function(e){
+							console.log("sdfsdfsd");
+
+							//13 means enter button
+							if(e.keyCode ===13 && $(".txtb4").val()!=""){
+							console.log("entered");
+								var task = $("<div class='task'></div>").text($(".txtb4").val());
+								var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+									var p = $(this).parent();
+									p.fadeOut(function(){
+										p.remove();
+
+									});
+								});
+
+								var check = $("<i class='fas fa-check'></i>").click(function(){
+									var p = $(this).parent();
+									p.fadeOut(function(){
+										$("#task8.comp").append(p);
+										p.fadeIn();
+
+									});
+									$(this).remove();
+								});
+
+								task.append(del, check);
+								$("#task7.notcomp").append(task);
+								//to clear the input
+								$(".txtb4").val("");
+							}
+						});
+
+						/* $(".checkmark").on("click", function(e)){
+							$(this).children('option:not(:selected)').prop('disabled', true);
+						} */
+
+					</script>
+
+		
+		</div>
+
+		<footer>
+			<p>Eisenhower Matrix, Copyright &copy; 2020</p>
+		</footer>
+
+		<!-- Load React. -->
+		  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+		  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+		  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+		  <!-- Load our React component. -->
+		  <script src="like_button.js"></script>
+
+	</body>
+	
+	</html>
+

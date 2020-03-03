@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> <!-- Character tab-->
+		<meta name="viewport" content="width= device-width"> <!-- Width of template -->
+		
+		<!-- SEO, description, keywords, author-->
+		<meta name="description" content="Productivity App">
+		<meta name="keywords" content="Productivity, Eisenhower Matrix, Time Tracker">
+		<meta name="author" content="Maria Tolymbek">
+
+		<title>Eisenhower Matrix | Welcome</title>
+		<link rel = "stylesheet" href = "./css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<!-- id is for something unique; class is over and over -->
+				<div id="branding">
+					<!-- span keeps it inline with the rest of the h1 
+					to apply the class -->
+					<h1><span class="highlight">Eisenhower </span>Matrix</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="homepage.html">Home</a></li>
+						<li class="current"><a href="login.html">Login</a></li>
+						<li><a href="stats.html">Company</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+
+		<section id="newsletter">
+			<div class="container">
+				<h1>Subscribe to our newsletter</h1>
+				<form action="">
+					<input type="email" placeholder="Enter email...">
+					<button type="submit" class="button1">Subscribe</button>
+
+				</form>
+			</div>	
+
+		</section>
+
+		<section id="main">
+			<div class="container">
+
+				<aside id="sidebar">
+
+					<div class="dark">
+										<!-- Button to open the modal login form -->
+					<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+						<!-- The Modal -->
+					<div id="id01" class="modal">
+					  <span onclick="document.getElementById('id01').style.display='none'"
+					class="close" title="Close Modal">&times;</span>
+
+					  <!-- Modal Content -->
+					  <form class="modal-content animate" action="/action_page.php">
+					    <div class="imgcontainer">
+					      <img src="imgs/avatar.png" alt="Avatar" class="avatar" width="100" height="100">
+					    </div>
+
+					    <div class="container">
+					      <label for="uname"><b>Username</b></label>
+					      <input type="text" placeholder="Enter Username" name="uname" required>
+
+					      <label for="psw"><b>Password</b></label>
+					      <input type="password" placeholder="Enter Password" name="psw" required>
+
+					      <button type="submit">Login</button>
+					      <label>
+					        <input type="checkbox" checked="checked" name="remember"> Remember me
+					      </label>
+					    </div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw"><a href="#">Forgot password?</a></span>
+				    </div>
+				  </form>
+				</div>					
+			</div>
+				</aside>
+
+			</div>
+		</section>
+
+		<footer>
+			<p>Eisenhower Matrix, Copyright &copy; 2020</p>
+
+
+		</footer>
+
+	</body>
+	
+	</html>
+
